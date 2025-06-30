@@ -1,17 +1,23 @@
 import Navigation from './components/Navigation';
 import AboutSection from './layouts/AboutSection';
 import HeroSection from './layouts/HeroSection';
-import Skills from './layouts/Skills';
-import SkillSection from './layouts/SkillSection';
+import './index.css';
+import ServiceSection from './layouts/ServicelSection';
+import ThemeToggle from './components/ThemeToggle';
+import { useContext } from 'react';
+import { ThemeContext } from './context/ThemeContext';
 
 const App = () => {
+  const { setIsOpen } = useContext(ThemeContext);
 
   return (
-    <div className='w-full bg-white dark:bg-black/100 transition-all'>
+    <div className='w-full h-full bg-white dark:bg-black/100 transition-all'>
       <Navigation />
-      <div className='w-11/12 sm:w-11/12 md:w-10/12 lg:w-10/12 mx-auto'>
+      <ThemeToggle />
+      <div className='w-11/12 sm:w-11/12 md:w-10/12 lg:w-10/12 mx-auto' onClick={() => setIsOpen(false)}>
         <HeroSection />
         <AboutSection />
+        <ServiceSection />
       </div>
     </div>
   )
