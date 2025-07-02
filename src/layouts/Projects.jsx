@@ -24,11 +24,11 @@ const Projects = () => {
     <Element name="projects" className="w-full min-h-screen flex items-center justify-center flex-col pt-18 xl:pt-0">
       <h1 className={`${themeColors[color].text} text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Recent Projects</h1>
       {projects.map(project => (
-        <div key={project.id} className="w-11/12 lg:w-full grid grid-cols-1 gap-2 md:gap-2 lg:gap-4 xl:gap-8 lg:grid-cols-3 outline outline-black/10 dark:outline-white/20 p-6 shadow-md rounded-md">
+        <div key={project.id} className="w-full grid grid-cols-1 gap-2 md:gap-2 lg:gap-4 xl:gap-8 lg:grid-cols-3 outline outline-black/10 dark:outline-white/20 p-6 shadow-md rounded-md">
           
           {/* First Column */}
           <div className="lg:col-span-1 rounded-md flex items-center justify-center">
-            <img className={`h-auto rounded-md shadow-lg outline-2 ${themeColors[color].outline}`} src={project.img} alt={project.name} />
+            <img className={`h-auto rounded-md shadow-lg transition-colors duration-500 outline-2 ${themeColors[color].outline}`} src={project.img} alt={project.name} />
           </div>
 
           {/* Second Column */}
@@ -45,13 +45,13 @@ const Projects = () => {
             <div className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md">
               <p className="inline font-medium">Features: </p>
               {project.features.map((feature, index) => (
-                <p className="inline whitespace-pre-wrap">{feature}{index < project.features.length - 1 && ', '}</p>
+                <p className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{feature}{index < project.features.length - 1 && ', '}</p>
               ))}
             </div>
             <div className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md mb-2">
               <p className="inline font-medium">Technology: </p>
               {project.tools.map((tool, index) => (
-                <p className="inline whitespace-pre-wrap">{tool}{index < project.tools.length - 1 && ', '}</p>
+                <p className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{tool}{index < project.tools.length - 1 && ', '}</p>
               ))}
             </div>
             <p className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md">Github - <span className="inline underline">MoviesApp</span></p>

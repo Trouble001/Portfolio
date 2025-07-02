@@ -18,7 +18,7 @@ const services = [
   },
   {
     id: 3,
-    name: "Ui Ux Design",
+    name: "Ui/Ux Design",
     desc: "I can design beautifull and atrractive websites for you.",
     icon: Squares2X2Icon,
   },
@@ -30,7 +30,7 @@ const services = [
   },
   {
     id: 5,
-    name: "Cv & Resume Design",
+    name: "Cv/Resume Design",
     desc: "I can design beautifull and atrractive websites for you.",
     icon: DocumentIcon,
   },
