@@ -13,17 +13,29 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-green-600",
       hover: "hover:text-green-600",
     },
-    rose: {
-      text: "text-rose-600",
-      bg: "bg-rose-600",
-      outline: "outline-rose-600",
-      hover: "hover:text-rose-600",
+    yellow: {
+      text: "text-yellow-600",
+      bg: "bg-yellow-600",
+      outline: "outline-yellow-600",
+      hover: "hover:text-yellow-600",
     },
-    orange: {
-      text: "text-orange-600",
-      bg: "bg-orange-600",
-      outline: "outline-orange-600",
-      hover: "hover:text-orange-600",
+    sky: {
+      text: "text-sky-600",
+      bg: "bg-sky-600",
+      outline: "outline-sky-600",
+      hover: "hover:text-sky-600",
+    },
+    red: {
+      text: "text-red-600",
+      bg: "bg-red-600",
+      outline: "outline-red-600",
+      hover: "hover:text-red-600",
+    },
+    slate: {
+      text: "text-slate-600",
+      bg: "bg-slate-600",
+      outline: "outline-slate-600",
+      hover: "hover:text-slate-600",
     },
   };
 

@@ -6,7 +6,7 @@ const ThemeToggle = () => {
   const { theme, themeColors, setColor, toggleTheme, isOpen } = useContext(ThemeContext);
 
   return (
-    <div className={`w-10 shadow fixed h-full flex items-center flex-col py-16 z-40 right-0 top-0 transition-all duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-10'}`}>
+    <div className={`w-10 shadow fixed h-full flex items-center flex-col py-16 z-40 right-0 top-0 transition-all duration-500 bg-white/10 border-l border-white/30 dark:bg-black/20 dark:border-white/10 backdrop-blur-md ${isOpen ? 'translate-x-0' : 'translate-x-10'}`}>
       
       <button
         onClick={toggleTheme}

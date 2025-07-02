@@ -6,6 +6,7 @@ import ServiceSection from './layouts/ServicelSection';
 import ThemeToggle from './components/ThemeToggle';
 import { useContext } from 'react';
 import { ThemeContext } from './context/ThemeContext';
+import Projects from './layouts/Projects';
 
 const App = () => {
   const { setIsOpen } = useContext(ThemeContext);
@@ -18,6 +19,7 @@ const App = () => {
         <HeroSection />
         <AboutSection />
         <ServiceSection />
+        <Projects />
       </div>
     </div>
   )

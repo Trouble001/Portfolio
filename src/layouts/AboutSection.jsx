@@ -1,12 +1,13 @@
 import { useContext } from "react";
 import Skills from "./Skills";
 import { ThemeContext } from "../context/ThemeContext";
+import { Element } from "react-scroll";
 
 const AboutSection = () => {
     const { themeColors, color } = useContext(ThemeContext);
   return (
-    <section className="w-full min-h-screen py-4 xl:py-0 grid gap-8 xl:gap-0 grid-cols-1 xl:grid-cols-2 border-b-2 border-black/30 dark:border-white/30">
-      <div className="w-full flex flex-col items-center justify-center">
+    <Element name="about" className="w-full min-h-screen grid gap-8 xl:gap-0 grid-cols-1 xl:grid-cols-2 border-b-2 items-center justify-center border-black/30 dark:border-white/30">
+      <div className="w-full flex flex-col items-center justify-center pt-18 xl:pt-0">
         <div className="w-11/12">
           <h1 className={`text-left text-lg sm:text-xl md:text-2xl lg:text-3xl xl:4xl transition-colors duration-500 font-bold ${themeColors[color].text}`}>- About Me</h1>
         </div>
@@ -39,7 +40,7 @@ const AboutSection = () => {
         <Skills />
       </div>
 
-    </section>
+    </Element>
   )
 }
 
