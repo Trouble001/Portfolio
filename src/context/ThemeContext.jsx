@@ -50,6 +50,17 @@ export const ThemeProvider = ({ children }) => {
     } else {
       root.classList.remove('dark');
     }
+
+    const metaTag = document.querySelector('meta[name="theme-color"]');
+    const color = theme === 'dark' ? "#1f2937" : "#ffffff";
+    if (metaTag) {
+      metaTag.setAttribute("content", color);
+    } else {
+      const newMeta = document.createElement("meta");
+      newMeta.setAttribute("name", "theme-color");
+      newMeta.setAttribute("content", color);
+      document.head.appendChild(newMeta);
+    }
     localStorage.setItem('theme', theme);
   }, [theme]);
 
