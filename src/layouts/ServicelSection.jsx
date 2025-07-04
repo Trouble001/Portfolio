@@ -47,7 +47,7 @@ const ServiceSection = () => {
             const Icon = service.icon;
             return (
               <div key={service.id} className="py-4 px-2 lg:px-3 shadow-md rounded-md flex flex-col items-center justify-center outline outline-black/10 dark:outline-white/20">
-                <Icon className={`w-7 sm:w-7 md:w-8 lg:w-8 xl:w-9 h-7 sm:h-7 md:h-8 lg:h-8 xl:h-9 ${themeColors[color].bg} transition-colors duration-500 p-1.5 flex items-center justify-center text-white/90 rounded-full shadow`} />
+                <Icon className={`w-8 sm:w-8 md:w-8 lg:w-9 xl:w-9 h-8 sm:h-8 md:h-8 lg:h-9 xl:h-9 ${themeColors[color].bg} transition-colors duration-500 p-1.5 flex items-center justify-center text-white/100 rounded-full shadow`} />
                 <h6 className='text-sm sm:text-sm md:text-base lg:text-base xl:text-md font-medium my-1 text-black/90 dark:text-white/90 dark:font-normal'>{service.name}</h6>
                 <p className='text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm text-center text-black/80 dark:text-white/60 dark:font-normal font-medium'>{service.desc}</p>
               </div>
