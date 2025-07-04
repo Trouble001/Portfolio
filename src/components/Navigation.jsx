@@ -17,7 +17,7 @@ const Navigation = () => {
           <Link to="about" smooth={true} duration={300} className={`text-xs sm:text-sm md:text-md lg:text-lg text-black/90 dark:text-white/90 mr-3 sm:mr-3 md:mr-4 lg:mr-5 xl:mr-6 ${themeColors[color].hover} cursor-pointer hover:border-b-2 transition-colors`}>About</Link>
           <Link to="service" smooth={true} duration={300} className={`text-xs sm:text-sm md:text-md lg:text-lg text-black/90 dark:text-white/90 mr-3 sm:mr-3 md:mr-4 lg:mr-5 xl:mr-6 ${themeColors[color].hover} cursor-pointer hover:border-b-2 transition-colors`}>Service</Link>
           <Link to="projects" smooth={true} duration={300} className={`text-xs sm:text-sm md:text-md lg:text-lg text-black/90 dark:text-white/90 mr-3 sm:mr-3 md:mr-4 lg:mr-5 xl:mr-6 ${themeColors[color].hover} cursor-pointer hover:border-b-2 transition-colors`}>Projects</Link>
-          <Link to="" smooth={true} duration={300} className={`text-xs sm:text-sm md:text-md lg:text-lg text-black/90 dark:text-white/90 hover:border-b-2 transition-colors ${themeColors[color].hover} cursor-pointer`}>Contact</Link>
+          <Link to="contact" smooth={true} duration={300} className={`text-xs sm:text-sm md:text-md lg:text-lg text-black/90 dark:text-white/90 hover:border-b-2 transition-colors ${themeColors[color].hover} cursor-pointer`}>Contact</Link>
         </div>
         <button onClick={() => setIsOpen(prevState => !prevState)} className='text-black/90 dark:text-white/90 w-5 sm:w-5 md:w-6 lg:w-6 h-5 sm:h-5 md:h-6 lg:h-6 flex items-center justify-center rounded-full cursor-pointer transition-all'>
         <Bars2Icon className="w-full h-full drop-shadow" />
