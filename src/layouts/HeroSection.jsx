@@ -10,10 +10,10 @@ const HeroSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <Element name="home" className="w-full min-h-screen h-auto flex items-center justify-center border-b-2 border-black/30 dark:border-white/30">
+    <Element name="home" className="w-full min-h-screen h-auto flex items-center justify-center">
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="">

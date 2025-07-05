@@ -2,6 +2,8 @@ import { ComputerDesktopIcon, CodeBracketSquareIcon, Squares2X2Icon, PencilSquar
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { Element } from "react-scroll";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const services = [
   {
@@ -38,11 +40,18 @@ const services = [
 
 const ServiceSection = () => {
   const { themeColors, color } = useContext(ThemeContext);
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
-    <Element name='service' className="w-full min-h-screen flex items-center justify-center">
-      <div className="w-full h-full flex flex-col items-center justify-center pt-12 md:pt-0">
-        <h1 className={`text-left text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${themeColors[color].text} font-bold transition-colors duration-500`}>What I Do?</h1>
-        <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 xl:gap-8 mt-8">
+    <Element name="service">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 80 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="w-full min-h-screen flex items-center justify-center">
+        <div className="w-full h-full flex flex-col items-center justify-center pt-12 md:pt-0">
+          <h1 className={`text-left text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${themeColors[color].text} font-bold transition-colors duration-500`}>What I Do?</h1>
+          <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 xl:gap-8 mt-8">
           {services.map((service) => {
             const Icon = service.icon;
             return (
@@ -53,8 +62,9 @@ const ServiceSection = () => {
               </div>
               )
           })}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </Element>
   )
 }

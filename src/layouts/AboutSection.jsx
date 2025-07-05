@@ -10,12 +10,13 @@ const AboutSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <motion.Element
+    <Element name="about">
+      <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 300 }}
+        initial={{ opacity: 0, y: 60 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        name="about" className="w-full min-h-screen grid gap-8 xl:gap-0 grid-cols-1 xl:grid-cols-2 border-b-2 items-center justify-center border-black/30 dark:border-white/30">
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+        className="w-full min-h-screen grid gap-8 xl:gap-0 grid-cols-1 xl:grid-cols-2 items-center justify-center">
       <div className="w-full flex flex-col items-center justify-center pt-18 pb-4">
         <div className="w-full">
           <h1 className={`text-left text-lg sm:text-xl md:text-2xl lg:text-3xl xl:4xl transition-colors duration-500 font-bold ${themeColors[color].text}`}>— About Me</h1>
@@ -49,7 +50,8 @@ const AboutSection = () => {
         <Skills />
       </div>
 
-    </motion.Element>
+    </motion.div>
+    </Element>
   )
 }
 
