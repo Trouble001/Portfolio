@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { Element, Link } from "react-scroll";
-// import myphoto from "../assets/myimage.png";
+// import PhotoHolder from "../components/PhotoHolder";
 
 const HeroSection = () => {
   const { themeColors, color } = useContext(ThemeContext);
@@ -16,6 +16,7 @@ const HeroSection = () => {
           <a href="../public/resume.pdf" download className={`text-sm sm:text-sm md:text-base lg-text-base xl:text-md transition-colors duration-500 outline ${themeColors[color].outline} ${themeColors[color].text}  px-6 sm:px-7 md:px-8 lg:px-10 xl:px-12 py-1.5 sm:py-1.5 md:py-2 lg:py-2 xl:py-2 cursor-pointer rounded-full flex items-center justify-center shadow`}>Get Resume</a>
         </div>
       </div>
+        {/* <PhotoHolder /> */}
     </Element>
   )
 }

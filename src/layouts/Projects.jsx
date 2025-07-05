@@ -22,7 +22,7 @@ const Projects = () => {
   const { themeColors, color } = useContext(ThemeContext);
   return (
     <Element name="projects" className="w-full min-h-screen flex items-center justify-center flex-col pt-18 xl:pt-0">
-      <h1 className={`${themeColors[color].text} text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Recent Projects</h1>
+      <h1 className={`${themeColors[color].text} text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Recent Projects</h1>
       {projects.map(project => (
         <div key={project.id} className="w-full grid grid-cols-1 gap-2 md:gap-2 lg:gap-4 xl:gap-8 lg:grid-cols-3 outline outline-black/10 dark:outline-white/20 p-6 shadow-md rounded-md">
           
@@ -45,13 +45,13 @@ const Projects = () => {
             <div className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md">
               <p className="inline font-medium">Features: </p>
               {project.features.map((feature, index) => (
-                <p className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{feature}{index < project.features.length - 1 && ', '}</p>
+                <p key={index} className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{feature}{index < project.features.length - 1 && ', '}</p>
               ))}
             </div>
             <div className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md mb-2">
               <p className="inline font-medium">Technology: </p>
               {project.tools.map((tool, index) => (
-                <p className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{tool}{index < project.tools.length - 1 && ', '}</p>
+                <p key={index} className="inline whitespace-pre-wrap text-black/70 dark:text-white/70">{tool}{index < project.tools.length - 1 && ', '}</p>
               ))}
             </div>
             <p className="text-black/80 dark:text-white/80 text-sm sm:text-sm md:text-base lg:text-base xl:text-md">Github - <span className="inline underline">MoviesApp</span></p>
