@@ -11,7 +11,7 @@ const ContactSection = () => {
   
   return (
     <Element name="contact" className="w-full min-h-screen h-auto flex items-center justify-center">
-      <div className="w-full h-full pt-12">
+      <div className="w-full h-full pt-6">
          <h1 className={`${themeColors[color].text} text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Contact Me</h1>
         
         <div className={`w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-4 outline-2 ${themeColors[color].outline} transition-colors duration-500 shadow-md rounded-md`}>
@@ -22,7 +22,7 @@ const ContactSection = () => {
             <ContactForm />
           </div>
         </div>
-        <div className="mt-12">
+        <div className="mt-14">
           <h5 className="text-sm sm:text-base md:text-md lg:text-lg xl:text-xl text-center font-medium text-black/90 dark:text-white/70">| Thank You For Visiting |</h5>
           <h5 className="text-xs sm:text-sm md:text-base lg:text-md xl:text-md text-center font-normal my-2 text-black/80 dark:text-white/60">— Special Thanks To —</h5>
           <div className="flex items-center justify-center mt-4">
