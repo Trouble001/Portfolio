@@ -70,7 +70,7 @@ const ContactForm = () => {
         className="w-full px-4 py-2 text-black/90 dark:text-white/80 outline outline-black/20 dark:outline-white/20 mb-4 rounded shadow"></textarea>
       <button
         type="submit"
-        className={`text-white/100 px-8 py-1.5 shadow-md rounded mb-2 ${themeColors[color].bg} transition-colors duration-500`}>Send</button>
+        className={`text-white/100 px-8 py-1.5 shadow-md rounded mb-2 ${themeColors[color].bg} transition-colors duration-500 cursor-pointer`}>Send</button>
         {status === "success" && (
           <p className="text-green-600 text-sm">{message}</p>
         )}

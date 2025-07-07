@@ -50,7 +50,7 @@ const ServiceSection = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="w-full min-h-screen flex items-center justify-center">
         <div className="w-full h-full flex flex-col items-center justify-center pt-12 md:pt-0">
-          <h1 className={`text-left text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ${themeColors[color].text} font-bold transition-colors duration-500`}>What I Do?</h1>
+          <h1 className={`text-black/90 dark:text-white/80 text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold transition-colors duration-500`}>What I <span className={`transition-colors duration-500 ${themeColors[color].text}`}>Do?</span></h1>
           <div className="w-11/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 xl:gap-8 mt-8">
           {services.map((service) => {
             const Icon = service.icon;

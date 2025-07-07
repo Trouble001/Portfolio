@@ -32,7 +32,7 @@ const Projects = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
         className="w-full min-h-screen flex items-center justify-center flex-col pt-18 xl:pt-0">
-        <h1 className={`${themeColors[color].text} text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Recent Projects</h1>
+        <h1 className={`text-black/90 dark:text-white/80 text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold transition-colors duration-500 mb-8`}>Recent <span className={`transition-colors duration-500 ${themeColors[color].text}`}>Projects</span></h1>
         {projects.map(project => (
           <div key={project.id} className="w-full grid grid-cols-1 gap-2 md:gap-2 lg:gap-4 xl:gap-8 lg:grid-cols-3 outline outline-black/10 dark:outline-white/20 p-6 shadow-md rounded-md">
           

@@ -21,9 +21,9 @@ const ContactSection = () => {
         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
         className="w-full min-h-screen h-auto flex items-center justify-center">
         <div className="w-full h-full pt-6">
-          <h1 className={`${themeColors[color].text} text-center text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold transition-colors duration-500 mb-8`}>Contact Me</h1>
+          <h1 className={`text-black/90 dark:text-white/80 text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold transition-colors duration-500 mb-8`}>Contact <span className={`transition-colors duration-500 ${themeColors[color].text}`}>Me</span></h1>
           
-          <div className={`w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-4 outline-2 ${themeColors[color].outline} transition-colors duration-500 shadow-md rounded-md`}>
+          <div className={`w-full h-full grid grid-cols-1 lg:grid-cols-2 gap-4 outline ${themeColors[color].outline} transition-colors duration-500 shadow-md rounded-md`}>
             <div className={`w-full h-full py-6 sm:py-6 md:py-8 lg:py-0 flex items-center justify-center rounded-tr-md rounded-tl-md lg:rounded-tl-md lg:rounded-tr-none lg:rounded-bl-md transition-colors duration-500 ${themeColors[color].bg}`}>
               <SocialIcons />
             </div>

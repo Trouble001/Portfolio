@@ -10,7 +10,7 @@ const HeroSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <Element name="home" className="w-full min-h-screen h-auto flex items-center justify-center">
+    <Element name="home" className="w-full lg:min-h-screen h-96 flex items-center justify-center">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 40 }}
