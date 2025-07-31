@@ -18,8 +18,8 @@ const HeroSection = () => {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="">
-        <div className={`w-50 h-60 ${themeColors[color].bg} transition-colors duration-500 relative shadow-md shadow-black/30 rounded-lg mx-auto mb-8 grayscale-75`}>
-          <img src={myphoto} className="w-full h-68 -mt-8 -ml-6 absolute drop-shadow rounded-lg" />
+        <div className={`w-50 h-66 ${themeColors[color].bg} transition-colors duration-500 relative shadow-md shadow-black/30 rounded-lg mx-auto mb-12 grayscale-75`}>
+          <img src={myphoto} className="w-full h-72 -mt-6 -ml-8 absolute drop-shadow rounded-lg" />
         </div>
         <h5 className="text-xl sm:text-xl md:text-3xl lg:text-3xl xl:text-4xl font-medium text-black/90 dark:text-white/90">Hello!</h5>
         <h3 className="text-3xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-black/100 dark:text-white/100 transition-colors duration-500">I'm <span className={`transition-colors duration-500 ${themeColors[color].text}`}>Pranesh Chaturvedi</span></h3>
