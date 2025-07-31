@@ -13,6 +13,7 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-green-600",
       border: "border-green-600",
       hover: "hover:text-green-600",
+      shadow: "dark:shadow-green-300",
     },
     yellow: {
       text: "text-yellow-600",
@@ -20,6 +21,7 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-yellow-600",
       border: "border-yellow-600",
       hover: "hover:text-yellow-600",
+      shadow: "dark:shadow-yellow-200",
     },
     sky: {
       text: "text-sky-600",
@@ -27,6 +29,7 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-sky-600",
       border: "border-sky-600",
       hover: "hover:text-sky-600",
+      shadow: "dark:shadow-sky-300",
     },
     red: {
       text: "text-red-600",
@@ -34,6 +37,7 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-red-600",
       border: "border-red-600",
       hover: "hover:text-red-600",
+      shadow: "dark:shadow-red-300",
     },
     slate: {
       text: "text-slate-600",
@@ -41,6 +45,7 @@ export const ThemeProvider = ({ children }) => {
       outline: "outline-slate-600",
       border: "border-slate-600",
       hover: "hover:text-slate-600",
+      shadow: "dark:shadow-slate-300",
     },
   };
 
